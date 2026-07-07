@@ -32,7 +32,7 @@ export function App(): JSX.Element {
         </div>
         <div className="justify-self-center">
           <Link to="/">
-            <h1 className="text-xl font-medium">Cupdate</h1>
+            <h1 className="text-xl font-medium">{import.meta.env.VITE_APP_NAME ?? 'Cupdate'}</h1>
           </Link>
         </div>
         <div className="justify-self-end mr-5">

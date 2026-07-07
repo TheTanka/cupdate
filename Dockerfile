@@ -12,8 +12,9 @@ COPY tsconfig.json vite.config.ts .
 COPY web web
 
 ARG CUPDATE_VERSION="development build"
+ARG VITE_APP_NAME="Cupdate"
 RUN --mount=type=cache,target=node_modules \
-  VITE_CUPDATE_VERSION="${CUPDATE_VERSION}" yarn build
+  VITE_CUPDATE_VERSION="${CUPDATE_VERSION}" VITE_APP_NAME="${VITE_APP_NAME}" yarn build
 
 FROM --platform=${BUILDPLATFORM} golang:1.26.4@sha256:f96cc555eb8db430159a3aa6797cd5bae561945b7b0fe7d0e284c63a3b291609 AS osv-scanner-builder
 

@@ -9,6 +9,7 @@ interface ImportMetaEnv {
   readonly VITE_DEMO_MODE?: string
   readonly VITE_CUPDATE_VERSION?: string
   readonly VITE_BASE_PATH?: string
+  readonly VITE_APP_NAME?: string
 }
 
 interface ImportMeta {
